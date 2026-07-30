@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Encuesta de satisfacción THIAGO Hotel Campestre" />
+
+    <title>THIAGO Hotel Campestre | Sugerencias</title>
+
+    <!-- Fuentes externas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <div class="progress-bar" aria-hidden="true">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="card">
+        <div class="hero-badge">
+          <span class="hero-badge-icon">✦</span>
+          Experiencia THIAGO
+        </div>
+
+        <!-- Logo institucional -->
+        <img src="assets/logo.png" class="logo" alt="THIAGO Hotel Campestre" />
+
+        <h1>Tu opinión es muy importante para nosotros</h1>
+
+        <p class="intro">
+          Tu opinión nos ayuda a mejorar cada día. Gracias por dedicar un minuto
+          para compartir tu experiencia en THIAGO Hotel Campestre.
+        </p>
+
+        <form
+            id="surveyForm"
+            action="https://formsubmit.co/thiagohotelcampestre@gmail.com"
+            method="POST"
+        >
+          <!-- Datos básicos del huésped -->
+          <div class="field">
+            <label for="nombre"><span class="field-icon">✦</span>Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre" required />
+          </div>
+
+          <div class="field">
+            <label for="habitacion"><span class="field-icon">◌</span>Habitación (1-14)</label>
+            <select id="habitacion" name="habitacion" required>
+              <option value="">Selecciona tu habitación</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+            </select>
+          </div>
+
+          <h2><span class="section-icon">✧</span>Califica tu experiencia</h2>
+
+          <!-- Sistema de calificación por estrellas -->
+          <div class="rating-group">
+            <label><span class="field-icon">❖</span>Servicio de recepción</label>
+            <div class="stars" role="radiogroup" aria-label="Servicio de recepción"></div>
+            <input type="hidden" name="servicio_recepcion" value="0" />
+          </div>
+
+          <div class="rating-group">
+            <label><span class="field-icon">❖</span>Confort de las habitaciones</label>
+            <div class="stars" role="radiogroup" aria-label="Confort de las habitaciones"></div>
+            <input type="hidden" name="confort_habitaciones" value="0" />
+          </div>
+
+          <div class="rating-group">
+            <label><span class="field-icon">❖</span>Limpieza de las habitaciones</label>
+            <div class="stars" role="radiogroup" aria-label="Limpieza de las habitaciones"></div>
+            <input type="hidden" name="limpieza_habitaciones" value="0" />
+          </div>
+
+          <div class="rating-group">
+            <label><span class="field-icon">❖</span>Limpieza del restaurante</label>
+            <div class="stars" role="radiogroup" aria-label="Limpieza del restaurante"></div>
+            <input type="hidden" name="limpieza_restaurante" value="0" />
+          </div>
+
+          <div class="rating-group">
+            <label><span class="field-icon">❖</span>Calidad de la comida</label>
+            <div class="stars" role="radiogroup" aria-label="Calidad de la comida"></div>
+            <input type="hidden" name="calidad_comida" value="0" />
+          </div>
+
+          <div class="rating-group">
+            <label><span class="field-icon">❖</span>Zonas húmedas (Piscina y Jacuzzi)</label>
+            <div class="stars" role="radiogroup" aria-label="Zonas húmedas"></div>
+            <input type="hidden" name="zonas_humedas" value="0" />
+          </div>
+
+          <div class="rating-group">
+            <label><span class="field-icon">❖</span>WiFi</label>
+            <div class="stars" role="radiogroup" aria-label="WiFi"></div>
+            <input type="hidden" name="wifi" value="0" />
+          </div>
+
+          <div class="rating-group">
+            <label><span class="field-icon">❖</span>Experiencia en el restaurante</label>
+            <div class="stars" role="radiogroup" aria-label="Experiencia en el restaurante"></div>
+            <input type="hidden" name="experiencia_restaurante" value="0" />
+          </div>
+
+          <div class="field">
+            <label for="observaciones"><span class="field-icon">✎</span>Observaciones</label>
+            <textarea
+              id="observaciones"
+              name="observaciones"
+              rows="5"
+              placeholder="Cuéntanos cómo fue tu experiencia..."
+            ></textarea>
+          </div>
+
+          <div class="field">
+            <label for="recomendaria"><span class="field-icon">☼</span>¿Nos recomendarías?</label>
+            <select id="recomendaria" name="recomendaria" required>
+              <option value="">Selecciona una opción</option>
+              <option value="Sí, definitivamente">Sí, definitivamente</option>
+              <option value="Probablemente sí">Probablemente sí</option>
+              <option value="Tal vez">Tal vez</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <input type="hidden" name="_subject" value="Nueva opinión - THIAGO Hotel Campestre" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="gracias.html" />
+
+          <button type="submit" class="btn">Enviar opinión</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
