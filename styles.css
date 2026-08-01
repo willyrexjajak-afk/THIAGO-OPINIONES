@@ -380,8 +380,8 @@ h2 {
     border-radius: 22px;
   }
 
-  .logo2.jpg {
-    width: 100px;
+  .logo {
+    width: 260px;
   }
 
   h1 {
@@ -414,7 +414,8 @@ h2 {
   }
 
   .logo {
-    width: 92px;
+    width: 260px; !important
+    height: auto; !important
   }
 
   h1 {
